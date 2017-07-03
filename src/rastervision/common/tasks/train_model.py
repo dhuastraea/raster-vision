@@ -131,7 +131,9 @@ class TrainModel():
         elif self.options.optimizer == RMS_PROP:
             optimizer = RMSprop(lr=self.options.init_lr)
         elif self.options.optimizer == YELLOWFIN:
-            optimizer = TFOptimizer(YFOptimizer())
+            optimizer = TFOptimizer(YFOptimizer(
+                learning_rate=self.options.init_lr,
+                momentum=self.options.momentum))
 
         self.model.compile(
             optimizer, self.loss_function, metrics=self.metrics)
