@@ -1,5 +1,5 @@
 {
-    "batch_size": 32,
+    "batch_size": 8,
     "git_commit": "86b3a0",
     "problem_type": "tagging",
     "dataset_name": "planet_kaggle",
@@ -8,11 +8,11 @@
     "use_pretraining": true,
     "freeze_base": false,
     "optimizer": "adam",
-    "lr_schedule": [[0, 0.0001], [30, 0.00001], [40, 0.000001]],
+    "lr_schedule": [[0, 0.0001], [60, 0.00001], [80, 0.000001]],
     "model_type": "densenet121",
     "train_ratio": 0.8,
     "nb_eval_plot_samples": 100,
-    "epochs": 50,
+    "epochs": 100,
     "active_tags": [
         "artisinal_mine",
         "blooming",
